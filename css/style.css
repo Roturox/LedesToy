@@ -1,0 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos del header */
+header {
+    background-color:red;
+    text-align: center;
+}
