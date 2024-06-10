@@ -1,10 +1,61 @@
 *{
     margin: 0;
     padding: 0;
+    text-decoration: none;
+}
+body {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    background-color: #295264;
 }
 
 /* Estilos del header */
-header {
-    background-color:red;
+.header {
+    background-color:#142433;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 150px;
+}
+
+.logo a{
+    color: white;
+
+}
+
+/* Estilos del btn-login */
+.header .btn-login button {
+    font-weight: 800;
+    color: dark;
+    padding: 13px 30px;
+    background-color: rgb(255, 255, 255);
+    border:none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header .btn-login button:hover {
+    background-color: #294968;
+    color: white;
+    transform: scale(1.1);
+}
+/* Fin de los estilos del header */
+
+.container-home-new_toy {
+    border: red solid 2px;
+    height:550px;
+    margin: 50px;
     text-align: center;
+}
+.container-home-new_toy p {
+    font-size: 150px;
+}
+
+
+h2 {
+    text-align: center;
+    font-size: 30px;
 }
