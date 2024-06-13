@@ -24,6 +24,7 @@ body {
 
 .logo a{
     color: #fad9a6;
+    text-decoration: none;
 
 }
 
@@ -81,10 +82,10 @@ body {
     text-align: center;
 }
 .subtitulos h3 {
-    font-size: 30px;
+    font-size: 50px;
     color: #fad9a6;
     margin-bottom: 25px;
-    border-bottom: 10px solid #fad9a6;
+    border-bottom: 5px solid #295264;
     padding-bottom: 10px;
     padding-top: 30px;
     display: inline-block;
@@ -92,10 +93,99 @@ body {
     display: inline-block;
 }
 
+/* Estilos del "Quines somos" */
+.heading {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 250px ;
+}
 
+.heading h3 {
+    font-size: 50px;    
+    margin-bottom: 25px;
+    position: relative;
+}
 
+.heading h3::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+    background-color: #295264;
+}
 
+.heading p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 35px;
+}
 
+.container-about {
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-image {
+    flex: 1;
+    margin-right: 40px;
+    overflow: hidden;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    display:block ;
+    transition: 0.4s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.2);
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-content h2 {
+    font-size: 23px;
+    margin: 15px;
+    color: #333;
+}
+
+.about-content p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #666;
+}
+
+.about-content .read-more {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 19px;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 15px;
+    transition: 0.3 ease;
+    background-color: #295264;
+}
+
+.about-content .read-more:hover {
+    background-color: #1f3e4b;
+}
 
 /* Estilos del footer */
 .footer {
