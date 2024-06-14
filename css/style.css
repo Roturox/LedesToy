@@ -8,16 +8,15 @@ body {
     font-weight: 800;
     font-style: normal;
     color: #fad9a6;
-    background-color: #000000;
 }
 
 /* Estilos del header */
 .header {
-    background-color:#214254;
+    background-color:#295aeb;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 85px;
+    height: 90px;
     padding: 5px 150px;
     color: #fad9a6;
 }
@@ -49,33 +48,114 @@ body {
 
 
 /* Estilos del top mas vendido */
-.container-home-new_toy {
-    margin: 20px;
-    text-align: center;
-}
-/* Imagenes del carusel */
-.img-xd {
-    height: 550px;
+.container {
+    max-width: 1200px;
+    width: 95%;
 }
 
-.carousel-control-next, .carousel-control-prev {
+.slider-wrapper {
+    position: relative;
+}
+
+.slider-wrapper .slide-button {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    z-index: 1;
+    top: 50%;
+    outline: none;
+    border: none;
+    height: 50px;
+    width: 50px;
+    z-index: 5;
+    color: #fff;
     display: flex;
+    cursor: pointer;
+    font-size: 2.2rem;
+    background: #000;
     align-items: center;
     justify-content: center;
-    width: 46%;
-    padding: 0;
-    color: #fff;
-    text-align: center;
-    background: 0 0;
-    border: 0;
-    opacity: .5;
-    transition: opacity .15s ease;
+    border-radius: 50%;
+    transform: translateY(-50%);
 }
 
+.slider-wrapper .slide-button:hover {
+    background: #404040;
+}
+
+.slider-wrapper .slide-button#prev-slide {
+    left: -25px;
+    display: none;
+}
+
+.slider-wrapper .slide-button#next-slide {
+    right: -25px;
+}
+
+.slider-wrapper .image-list {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 18px;
+    font-size: 0;
+    list-style: none;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.slider-wrapper .image-list::-webkit-scrollbar {
+    display: none;
+}
+
+.slider-wrapper .image-list .image-item {
+    width: 325px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.container .slider-scrollbar {
+    height: 24px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.slider-scrollbar .scrollbar-track {
+    background: #ccc;
+    width: 100%;
+    height: 2px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    position: relative;
+}
+
+.slider-scrollbar:hover .scrollbar-track {
+    height: 4px;
+}
+
+.slider-scrollbar .scrollbar-thumb {
+    position: absolute;
+    background: #000;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+    cursor: grab;
+    border-radius: inherit;
+}
+
+.slider-scrollbar .scrollbar-thumb:active {
+    cursor: grabbing;
+    height: 8px;
+    top: -2px;
+}
+
+.slider-scrollbar .scrollbar-thumb::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
+}
 
 /* Subtitlos de la pagina */
 .titulos {
@@ -148,12 +228,8 @@ body {
     max-width: 100%;
     height: auto;
     display:block ;
-    transition: 0.4s ease;
 }
 
-.about-image:hover img {
-    transform: scale(1.2);
-}
 
 .about-content {
     flex: 1;
@@ -186,6 +262,67 @@ body {
 .about-content .read-more:hover {
     background-color: #1f3e4b;
 }
+
+
+/* Cards de presentacion */
+.containers-card{
+    width: 100%;
+    display: flex;
+    max-width: 1100px;
+    margin: auto;
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+.card {
+    width: 100%;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    cursor: default;
+    transition: all 400ms ease;
+}
+.card:hover {
+    box-shadow:5px 5px 20px rgba(0, 0, 0, 0.4) ;
+    transform: translateY(-3%);
+}
+.card img {
+    width: 100%;
+    height: 210px;
+}
+.card .contenido {
+    padding: 15px;
+    text-align: center;
+}
+.card .contenido p {
+    line-height: 1.5;
+    color: #313131;
+    padding-bottom: 15px;
+}
+.card .contenido h3 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.card .contenido a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(84, 3, 111);
+    border-radius: 2px;
+    transition: all 400ms ease;
+}
+.card .contenido a:hover {
+    background-color: rgb(57, 3, 101);
+    color: rgb(255, 255, 255);
+}
+
+
+
+
+
 
 /* Estilos del footer */
 .footer {

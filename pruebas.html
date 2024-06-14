@@ -1,82 +1,42 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiénes Somos</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        #quienes-somos {
-            background: #fff;
-            padding: 30px;
-            margin-top: 30px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        #quienes-somos h2 {
-            text-align: center;
-            color: #333;
-        }
-        #quienes-somos h3 {
-            color: #555;
-        }
-        #quienes-somos p {
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-        #quienes-somos ul {
-            list-style: none;
-            padding: 0;
-        }
-        #quienes-somos ul li {
-            background: #e2e2e2;
-            margin: 5px 0;
-            padding: 10px;
-        }
-        #quienes-somos ul li:nth-child(odd) {
-            background: #d4d4d4;
-        }
-    </style>
-</head>
-<body>
-    <a href="./index.html">HOLA</a>
+<!-- Coding By CodingNepal - www.codingnepalweb.com -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Slider in HTML CSS and JavaScript | CodingNepal</title>
+    <!-- Google Fonts Link For Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="./css/xd.css" />
+    <script src="./js/prueba.js" defer></script>
+  </head>
+  <body>
     <div class="container">
-        <section id="quienes-somos">
-            <h2>Quiénes Somos</h2>
-            <h3>Nuestra Historia</h3>
-            <p>En <strong>[Nombre de la Empresa]</strong>, creemos en la innovación y la excelencia. Fundada en <strong>[Año de Fundación]</strong>, nuestra empresa ha crecido desde sus humildes comienzos hasta convertirse en un líder del mercado en <strong>[Industria/sector]</strong>. Todo comenzó con una visión clara: ofrecer productos y servicios de alta calidad que marquen una diferencia en la vida de nuestros clientes.</p>
-            
-            <h3>Nuestra Misión</h3>
-            <p>Nuestra misión es <strong>[describir la misión]</strong>. Nos dedicamos a <strong>[breve descripción de las actividades principales de la empresa]</strong>, con un compromiso inquebrantable con <strong>[valores principales]</strong>. Trabajamos incansablemente para innovar y mejorar, asegurando que nuestros clientes siempre reciban lo mejor.</p>
-            
-            <h3>Nuetros Valores</h3>
-            <ul>
-                <li><strong>Calidad:</strong> Nos esforzamos por alcanzar la excelencia en todo lo que hacemos.</li>
-                <li><strong>Innovación:</strong> Buscamos constantemente nuevas formas de mejorar nuestros productos y servicios.</li>
-                <li><strong>Integridad:</strong> Actuamos con honestidad y transparencia en todas nuestras interacciones.</li>
-                <li><strong>Sostenibilidad:</strong> Comprometidos con prácticas que protegen nuestro planeta para las futuras generaciones.</li>
-                <li><strong>Servicio al Cliente:</strong> Ponemos a nuestros clientes en el centro de todo lo que hacemos, buscando siempre superar sus expectativas.</li>
-            </ul>
-
-            <h3>Nuestro Equipo</h3>
-            <p>Nuestro equipo está formado por profesionales apasionados y dedicados, que comparten la visión de la empresa y trabajan juntos para alcanzar nuestras metas. Creemos en el poder de la colaboración y valoramos la diversidad de ideas y experiencias. Cada miembro de nuestro equipo es crucial para nuestro éxito y juntos logramos resultados extraordinarios.</p>
-
-            <h3>Por Qué Elegirnos</h3>
-            <p>En <strong>[Nombre de la Empresa]</strong>, no solo ofrecemos productos y servicios, sino que también creamos experiencias memorables. Nos enorgullece la confianza que nuestros clientes depositan en nosotros y nos esforzamos cada día para mantener y fortalecer esa confianza. Elegirnos significa optar por calidad, innovación y un compromiso genuino con la satisfacción del cliente.</p>
-
-            <h3>Contáctanos</h3>
-            <p>Estamos aquí para ti. Si tienes alguna pregunta, comentario o simplemente deseas saber más sobre nosotros, no dudes en contactarnos a través de <strong>[Información de Contacto]</strong>. Estaremos encantados de atenderte.</p>
-        </section>
+      <div class="slider-wrapper">
+        <button id="prev-slide" class="slide-button material-symbols-rounded">
+          chevron_left
+        </button>
+        <ul class="image-list">
+          <img class="image-item" src="./img/1.jpg" alt="img-1" />
+          <img class="image-item" src="images/img-2.jpg" alt="img-2" />
+          <img class="image-item" src="images/img-3.jpg" alt="img-3" />
+          <img class="image-item" src="images/img-4.jpg" alt="img-4" />
+          <img class="image-item" src="images/img-5.jpg" alt="img-5" />
+          <img class="image-item" src="images/img-6.jpg" alt="img-6" />
+          <img class="image-item" src="images/img-7.jpg" alt="img-7" />
+          <img class="image-item" src="images/img-8.jpg" alt="img-8" />
+          <img class="image-item" src="images/img-9.jpg" alt="img-9" />
+          <img class="image-item" src="images/img-10.jpg" alt="img-10" />
+        </ul>
+        <button id="next-slide" class="slide-button material-symbols-rounded">
+          chevron_right
+        </button>
+      </div>
+      <div class="slider-scrollbar">
+        <div class="scrollbar-track">
+          <div class="scrollbar-thumb"></div>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
