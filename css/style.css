@@ -432,3 +432,229 @@ body {
 .menu-icon:hover {
     opacity: 1;
 }
+
+
+
+
+
+
+
+/*//////////////////////    Estilos De Login/Register   /////////////// */
+/* Parte de Login/Register */
+.wrapper {
+  margin: auto;
+  width: 450px;
+  border: 2px solid rgba(255, 255, 255, .2);
+  margin-top: 50px;
+  margin-bottom: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  color: #000000;
+  border-radius: 10px;
+  padding: 30px 40px;
+}
+
+.wrapper h4 {
+  font-size: 30px;
+  text-align: center;
+}
+
+h5 {
+  color: #33333380;
+  font-size: 12px;
+}
+.wrapper .input-box {
+  width: 100%;
+  height: 50px;
+  margin: 30px 0px;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  border: 2px solid rgb(213, 213, 213);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #000000;
+  padding: 20px 45px 20px 20px ;
+}
+
+
+.wrapper .remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: -15px 0 15px;
+}
+.input-container {
+  position: relative;
+  margin: 50px auto;
+  width: 100%;
+}
+
+/* Estilos para escribir las informacion */
+.input-container input[type="text"], input[type="password"]{
+  font-size: 15px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  padding: 5px 0;
+  background-color: transparent;
+  outline: none;
+}
+
+.input-container .label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #ccc;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.input-container input[type="text"]:focus ~ .label,
+.input-container input[type="text"]:valid ~ .label,
+.input-container input[type="password"]:focus ~ .label,
+.input-container input[type="password"]:valid ~ .label {
+  top: -20px;
+  font-size: 16px;
+  color: rgb(73, 1, 73);
+}
+
+.input-container .underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: rgb(113, 1, 113);
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+.underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: rgb(113, 1, 113);
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+
+.input-container input[type="text"]:focus ~ .underline,
+.input-container input[type="text"]:valid ~ .underline,
+.input-container input[type="password"]:focus ~ .label,
+.input-container input[type="password"]:valid ~ .label {
+  transform: scaleX(1);
+}
+/* /////////// */
+
+
+.wrapper .btn {
+  width: 90%;
+  height: 45px;
+  position: relative;
+  left: 5%;
+  background-color: rgb(73, 1, 73);
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0,.1);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Estilos para el Boton de SUBIR */
+
+
+.wrapper .register-link {
+  font-size: 14.5px;
+  text-align:center;
+  margin: 20px 0 15px;
+}
+
+.register-link p a {
+  color: #880bad;
+  text-decoration: none;
+  font-weight: 600;
+}
+.register-link p a:hover {
+  text-decoration: underline;
+}
+
+.full-rounded {
+  font-size: 16px;
+  position: relative;
+  margin: auto;
+  padding: 1em 2.5em 1em 2.5em;
+  border: none;
+  background: #ffffff;
+  transition: all 0.1s linear;
+  box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
+  }
+
+  .full-rounded:active {
+  transform: scale(0.95);
+  }
+
+  .full-rounded span {
+  color: #464646;
+  }
+
+  .full-rounded .border {
+  position: absolute;
+  border: 0.15em solid #fff;
+  transition: all 0.3s 0.08s linear;
+  top: 50%;
+  left: 50%;
+  width: 9em;
+  height: 3em;
+  transform: translate(-50%, -50%);
+  }
+
+  .full-rounded:hover .border {
+  display: block;
+  width: 10.7em;
+  height: 4.1em;
+  }
+
+  .full-rounded {
+  border-radius: 2em;
+  }
+
+/* Estilos de la foto de perfil */
+.container-foto{
+  text-align: center;
+}
+.image-container{
+  width: 50%;
+  margin: 0 auto 30px auto;
+  margin: auto;
+}
+.image-container img{
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #dfdfdf;
+}
+input[type="file"]{
+  display: none;
+}
+.upload-button{
+  display: block;
+  position: relative;
+  background-color: #660c6e;
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center;
+  width:  230px;
+  padding: 18px 0;
+  border-radius: 5px;
+  margin: auto;
+  cursor: pointer;
+}
