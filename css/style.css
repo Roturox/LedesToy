@@ -7,22 +7,19 @@ body {
     font-family: "M PLUS Rounded 1c", sans-serif;
     font-weight: 800;
     font-style: normal;
-    color: #fad9a6;
 }
 
 /* Estilos del header */
 .header {
-    background-color:#295aeb;
+    background-color:#CDD6F6;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 90px;
     padding: 5px 150px;
-    color: #fad9a6;
 }
 
 .logo a{
-    color: #fad9a6;
     text-decoration: none;
 
 }
@@ -48,6 +45,9 @@ body {
 
 
 /* Estilos del top mas vendido */
+.titulos .subtitulos h3 {
+    margin-top: 80px;
+}
 .container {
     max-width: 1200px;
     width: 95%;
@@ -93,11 +93,61 @@ body {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     gap: 18px;
-    font-size: 0;
     list-style: none;
     margin-bottom: 30px;
     overflow-x: auto;
     scrollbar-width: none;
+}
+
+.slider-wrapper .image-list .card-toy {
+    width: 350px;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    color: #000;
+    cursor: default;
+    transition: all 200ms ease;
+}
+
+.card-toy:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-1%);
+}
+
+.card-toy img {
+    width: 100%;
+    height: 300px;
+}
+
+.card-toy .contenido-toy {
+    padding: 15px;
+    text-align: center;
+}
+
+.card-toy .contenido-toy p {
+    line-height: 1.5;
+    color: #313131;
+    padding-bottom: 15px;
+}
+
+.card-toy .contenido-toy h3 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.card-toy .contenido-toy a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    color: #000;
+    margin-bottom: 10px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 2px;
+    transition: all 400ms ease;
+}
+.card-toy .contenido-toy a:hover {
+    background-color: rgb(57, 3, 101);
+    color: rgb(255, 255, 255);
 }
 
 .slider-wrapper .image-list::-webkit-scrollbar {
@@ -163,7 +213,6 @@ body {
 }
 .subtitulos h3 {
     font-size: 50px;
-    color: #fad9a6;
     margin-bottom: 25px;
     border-bottom: 5px solid #295264;
     padding-bottom: 10px;
@@ -181,7 +230,7 @@ body {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    margin-top: 250px ;
+    margin-top: 100px ;
 }
 
 .heading h3 {
@@ -264,65 +313,61 @@ body {
 }
 
 
-/* Cards de presentacion */
-.containers-card{
-    width: 100%;
+
+
+/* .container-info {
+    height: 200px;
+    background-color: #1900ff;
+    margin-bottom: 20px;
+    margin-top: 20px;
+} */
+
+#icons-section {
+    background: #00a8fb;
+    padding: 50px 0;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+#icons-section .container-info {
     display: flex;
-    max-width: 1100px;
-    margin: auto;
-    margin-top: 150px;
-    margin-bottom: 150px;
+    justify-content:center;
 }
-.card {
-    width: 100%;
-    margin: 20px;
-    border-radius: 6px;
-    overflow: hidden;
-    background-color: #fff;
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
-    cursor: default;
-    transition: all 400ms ease;
+
+#icons-section .box-info {
+    position: relative;
+    width: 254px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
 }
-.card:hover {
-    box-shadow:5px 5px 20px rgba(0, 0, 0, 0.4) ;
-    transform: translateY(-3%);
+
+#icons-section .item-info:after {
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    margin-top: -24px;
+    height: 48px;
+    background: #ff0000;
+    content: "";
 }
-.card img {
-    width: 100%;
-    height: 210px;
+
+#icons-section .active:last-child .item-info:after {
+    display: none;
 }
-.card .contenido {
-    padding: 15px;
-    text-align: center;
-}
-.card .contenido p {
-    line-height: 1.5;
-    color: #313131;
-    padding-bottom: 15px;
-}
-.card .contenido h3 {
-    font-weight: 600;
-    margin-bottom: 15px;
-}
-.card .contenido a {
-    text-decoration: none;
+
+#icons-section .box-info img {
+    align-self: center;
+    margin-right: 15px;
+    align-self: center;
+    width: auto;
     display: inline-block;
-    padding: 10px;
-    margin-bottom: 10px;
-    color: rgb(0, 0, 0);
-    border: 2px solid rgb(84, 3, 111);
-    border-radius: 2px;
-    transition: all 400ms ease;
-}
-.card .contenido a:hover {
-    background-color: rgb(57, 3, 101);
-    color: rgb(255, 255, 255);
 }
 
-
-
-
-
+#icons-section .box-info img {
+    color: #FFF;
+    font-size: 18px;
+}
 
 /* Estilos del footer */
 .footer {
