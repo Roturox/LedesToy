@@ -11,30 +11,30 @@ if(document.readyState == 'loading'){
 function ready(){
     
     //Agregremos funcionalidad a los botones eliminar del carrito
-    var botonesEliminarItem = document.getElementsByClassName('btn-eliminar');
-    for(var i=0;i<botonesEliminarItem.length; i++){
-        var button = botonesEliminarItem[i];
+    var btn_del_item = document.getElementsByClassName('btn-eliminar');
+    for(var i=0;i<btn_del_item.length; i++){
+        var button = btn_del_item[i];
         button.addEventListener('click',eliminarItemCarrito);
     }
 
     //Agrego funcionalidad al boton sumar cantidad
-    var botonesSumarCantidad = document.getElementsByClassName('sumar-cantidad');
-    for(var i=0;i<botonesSumarCantidad.length; i++){
-        var button = botonesSumarCantidad[i];
+    var btn_plus_cant = document.getElementsByClassName('sumar-cantidad');
+    for(var i=0;i<btn_plus_cant.length; i++){
+        var button = btn_plus_cant[i];
         button.addEventListener('click',sumarCantidad);
     }
 
      //Agrego funcionalidad al buton restar cantidad
-    var botonesRestarCantidad = document.getElementsByClassName('restar-cantidad');
-    for(var i=0;i<botonesRestarCantidad.length; i++){
-        var button = botonesRestarCantidad[i];
+    var btn_min_cant = document.getElementsByClassName('restar-cantidad');
+    for(var i=0;i<btn_min_cant.length; i++){
+        var button = btn_min_cant[i];
         button.addEventListener('click',restarCantidad);
     }
 
     //Agregamos funcionalidad al boton Agregar al carrito
-    var botonesAgregarAlCarrito = document.getElementsByClassName('boton-item');
-    for(var i=0; i<botonesAgregarAlCarrito.length;i++){
-        var button = botonesAgregarAlCarrito[i];
+    var btn_agregar_carrito = document.getElementsByClassName('boton-item');
+    for(var i=0; i<btn_agregar_carrito.length;i++){
+        var button = btn_agregar_carrito[i];
         button.addEventListener('click', agregarAlCarritoClicked);
     }
 
@@ -61,13 +61,13 @@ function agregarAlCarritoClicked(event){
     var imagenSrc = item.getElementsByClassName('img-item')[0].src;
     console.log(imagenSrc);
 
-    agregarItemAlCarrito(titulo, precio, imagenSrc);
+    add_item_cart(titulo, precio, imagenSrc);
 
-    hacerVisibleCarrito();
+    cart_visible();
 }
 
 //Funcion que hace visible el carrito
-function hacerVisibleCarrito(){
+function cart_visible(){
     carritoVisible = true;
     var carrito = document.getElementsByClassName('carrito')[0];
     carrito.style.marginRight = '0';
@@ -78,7 +78,7 @@ function hacerVisibleCarrito(){
 }
 
 //Funciòn que agrega un item al carrito
-function agregarItemAlCarrito(titulo, precio, imagenSrc){
+function add_item_cart(titulo, precio, imagenSrc){
     var item = document.createElement('div');
     item.classList.add = ('item');
     var itemsCarrito = document.getElementsByClassName('carrito-items')[0];
@@ -165,8 +165,6 @@ function ocultarCarrito(){
     var carritoItems = document.getElementsByClassName('carrito-items')[0];
     if(carritoItems.childElementCount==0){
         var carrito = document.getElementsByClassName('carrito')[0];
-        carrito.style.marginRight = '-100%';
-        carrito.style.opacity = '0';
         carritoVisible = false;
     
         var items =document.getElementsByClassName('contenedor-items')[0];
@@ -192,6 +190,6 @@ function actualizarTotalCarrito(){
     }
     total = Math.round(total * 100)/100;
 
-    document.getElementsByClassName('carrito-precio-total')[0].innerText = '$'+total.toLocaleString("es") + ",00";
+    document.getElementsByClassName('carrito-precio-total')[0].innerText = '$'+total.toLocaleString("es");
 
 }

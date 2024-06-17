@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluador RPN e Infijo a RPN</title>
+    <link rel="stylesheet" href="./estilos/estilos.css">
+    <script src="./js/script.js" defer></script>
+</head>
+<body>
+    <a href="./index.html">LedesToy</a>
+    <div class="container">
+        <h1>Evaluador de Expresiones</h1>
+
+        <div class="input-section">
+            <label for="infixExpression">Expresión Infija:</label>
+            <input type="text" id="infixExpression" name="infixExpression" placeholder="Ejemplo: 3 + 4 * 2 / ( 1 - 5 ) ** 2">
+            <button onclick="convertirAInfijoRPN()">Convertir a RPN</button>
+            <p id="rpnResultado">El resultado en RPN aparecerá aquí</p>
+            <div id="stepsContainer"></div>
+        </div>
+
+        <div class="input-section">
+            <label for="rpnExpression">Expresión RPN:</label>
+            <input type="text" id="rpnExpression" name="rpnExpression" placeholder="Ejemplo: 3 4 +">
+            <button onclick="evaluarRPN()">Evaluar</button>
+            <p id="resultado">El resultado aparecerá aquí</p>
+        </div>
+    </div>
+</body>
+</html>
