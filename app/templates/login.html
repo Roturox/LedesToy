@@ -5,7 +5,7 @@
     <!-- Link del boostrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Link del css -->
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../static/css/style.css">
     <!-- Link de los Icon -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -20,63 +20,42 @@
     <!-- Header de la pagina -->
     <header class="header">
         <div class="logo"> 
-            <a href="../index.html"><h1>LedesToy</h1></a>
+            <a href="../../index.html"><h1>LedesToy</h1></a>
         </div>
-        <a href="./Productos.html">Productos</a>
         <a href="./login.html" class="btn-login"><button><i class="fa-solid fa-user"></i></button></a>
     </header>
     <!-- Fin del header pagina -->
 
-    <section class="contenedor">
-        <!-- Contenedor de elementos -->
-        <div class="contenedor-items">
-            <div class="item">
-                <span class="titulo-item">Ajolote Rosa</span>
-                <img src="../img/Ajolote.jpg" alt="" class="img-item">
-                <span class="precio-item">$9.39</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <div class="item">
-                <span class="titulo-item">Pou triste</span>
-                <img src="../img/pou-triste.jpg" alt="" class="img-item">
-                <span class="precio-item">$3</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <div class="item">
-                <span class="titulo-item">Carpincho</span>
-                <img src="../img/carpincho-mochi.jpg" alt="" class="img-item">
-                <span class="precio-item">$7.80</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <div class="item">
-                <span class="titulo-item">Dinosaurio</span>
-                <img src="../img/dinosaurio.jpg" alt="" class="img-item">
-                <span class="precio-item">$4.50</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-        </div>
-        <!-- Carrito de Compras -->
-        <div class="carrito" id="carrito">
-            <div class="header-carrito">
-                <h2>Tu Carrito</h2>
-            </div>
-
-            <div class="carrito-items">
-            </div>
-            <div class="carrito-total">
-                <div class="fila">
-                    <strong>Tu Total</strong>
-                    <span class="carrito-precio-total">
-                        $120.000,00
-                    </span>
+<div class="fondo_login_register">
+    <div class="wrapper">
+            <form action="" method="post" enctype = "multipart/form-data">
+                <h4>¡Nos alegra volverte a ver!</h4>
+    
+    
+                    <!-- Login de Usuario -->
+                <div class="input-container">
+                    <input type="text" name="email" required>
+                    <label for="input" class="label">Correo Electronico</label>
+                    <div class="underline"></div>
                 </div>
-                <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
-            </div>
+    
+                <div class="input-container">
+                    <input type="password" name="pass" required>
+                    <label class="label">Contraseña</label>
+                    <div class="underline"></div>
+                </div>
+                <!-- Boton para Login -->
+                <input type="submit" name="register" value="Enviar" class="btn">
+    
+    
+                <div class="register-link">
+                    <p>¿No tienes una cuenta?<a href="./registrar_usuarios.html"> Registrarse</a></p>
+                </div>
+            </form>
         </div>
-    </section>
+        </div>
 
-
-<!-- Pie de Pagina-->
+        <!-- Pie de Pagina-->
     <footer class="footer">
         <ul class="social-icon">
         <li class="icon-elem">
@@ -107,7 +86,7 @@
         </ul>
         <ul class="menu">
         <li class="menu-elem">
-            <a href="./index.html" class="menu-icon"> Inicio </a>
+            <a href="../../index.html" class="menu-icon"> Inicio </a>
         </li>
         <li class="menu-elem">
             <a href="" class="menu-icon"> Equipo </a>
@@ -123,9 +102,6 @@
         </li>
         </ul>
     </footer>
-<!-- Carrito -->
-<script src="../js/carrito.js" async></script>
-<!-- Script de Boostrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
 </body>
 </html>
