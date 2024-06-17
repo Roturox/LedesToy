@@ -67,15 +67,6 @@ function agregarAlCarritoClicked(event){
 }
 
 //Funcion que hace visible el carrito
-function cart_visible(){
-    carritoVisible = true;
-    var carrito = document.getElementsByClassName('carrito')[0];
-    carrito.style.marginRight = '0';
-    carrito.style.opacity = '1';
-
-    var items =document.getElementsByClassName('contenedor-items')[0];
-    items.style.width = '60%';
-}
 
 //Funciòn que agrega un item al carrito
 function add_item_cart(titulo, precio, imagenSrc){
@@ -113,7 +104,7 @@ function add_item_cart(titulo, precio, imagenSrc){
     itemsCarrito.append(item);
 
     //Agregamos la funcionalidad eliminar al nuevo item
-     item.getElementsByClassName('btn-eliminar')[0].addEventListener('click', eliminarItemCarrito);
+    item.getElementsByClassName('btn-eliminar')[0].addEventListener('click', eliminarItemCarrito);
 
     //Agregmos al funcionalidad restar cantidad del nuevo item
     var botonRestarCantidad = item.getElementsByClassName('restar-cantidad')[0];
@@ -158,19 +149,9 @@ function eliminarItemCarrito(event){
 
     //la siguiente funciòn controla si hay elementos en el carrito
     //Si no hay elimino el carrito
-    ocultarCarrito();
 }
 //Funciòn que controla si hay elementos en el carrito. Si no hay oculto el carrito.
-function ocultarCarrito(){
-    var carritoItems = document.getElementsByClassName('carrito-items')[0];
-    if(carritoItems.childElementCount==0){
-        var carrito = document.getElementsByClassName('carrito')[0];
-        carritoVisible = false;
-    
-        var items =document.getElementsByClassName('contenedor-items')[0];
-        items.style.width = '100%';
-    }
-}
+
 //Actualizamos el total de Carrito
 function actualizarTotalCarrito(){
     //seleccionamos el contenedor carrito
