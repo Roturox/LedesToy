@@ -11,7 +11,7 @@ body {
 
 /* Estilos del header */
 .header {
-    background-color:#CDD6F6;
+    background-color:#BEE9DD;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,8 +21,8 @@ body {
 
 .logo a{
     text-decoration: none;
-
-}
+    color: #000;
+    }
 
 /* Estilos del btn-login */
 .header .btn-login button {
@@ -435,30 +435,26 @@ body {
 
 /* Estamos probando carajo */
 .contenedor{
-    max-width: 1300px;
     padding: 10px;
-    margin: auto;
-    display: flex;  
-    /* oculto lo que queda fuera del .contenedor */
-    contain: paint;
+    display: flex;
 }
 /* SECCION CONTENEDOR DE ITEMS */
 .contenedor .contenedor-items{
     display: flex;
     flex-wrap: wrap;
+    width: 60%;
 }
 .contenedor .contenedor-items .item{
-    max-width: 200px;
+    width: 250px;
     margin: auto;
-    border: 1px solid #666;
     border-radius: 10px;
     padding: 20px;
     margin: 20px;
     transition: .3s;
 }
 .contenedor .contenedor-items .item .img-item{
-    width: 150px;
     height: 200px;
+    width: 100%;
 }
 .contenedor .contenedor-items .item:hover{
     box-shadow: 0 0 10px #666;
@@ -489,11 +485,11 @@ body {
 }
 /* seccion carrito */
 .carrito{
-    position: absolute;
+    border-radius: 0.3125rem;
     border: 1px solid #666;
-    width: 50%;
+    width: 550px;
     margin-top: 30px;
-    border-radius: 10px;
+    margin: 30px;
     overflow: hidden;
     margin-bottom: auto;
     position: sticky !important;
@@ -501,8 +497,8 @@ body {
     transition: .3s;
 }
 .carrito .header-carrito{
-    background-color: #000;
-    color: #fff;
+    background-color: #BEE9DD;
+    color: #282828;
     text-align: center;
     padding: 30px 0;
 }
@@ -513,6 +509,7 @@ body {
     position: relative;
     border-bottom: 1px solid #666;
     padding: 20px;
+    margin: auto;
 }
 .carrito .carrito-item img{
     margin-right: 20px;
@@ -589,8 +586,8 @@ body {
     display: block;
     width: 100%;
     border: none;
-    background: #000;
-    color: #fff;
+    background: #BEE9DD;
+    color: #282828;
     border-radius: 5px;
     font-size: 18px;
     padding: 20px;
@@ -792,35 +789,41 @@ transform: scaleX(1);
     border-radius: 2em;
 }
 
-/* Estilos de la foto de perfil */
-.container-foto{
+
+/* Search-Bar */
+.search {
+    --padding:24px;
+    width:fit-content;
+    display: flex;
     text-align: center;
+    align-items: center;
+    padding: var(--padding);
+    padding: 14px;
+    border-radius: 28px;
+    background-color: #f6f6f6;
+    width:  600px;
 }
-.image-container{
-    width: 50%;
-    margin: 0 auto 30px auto;
-    margin: auto;
+
+.search-input {
+    font-size: 16px;
+    color: #333;
+    margin-left: 14px;
+    margin-left: var(--padding);
+    outline: none;
+    border: none;
+    background-color: transparent;
 }
-.image-container img{
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    background: #dfdfdf;
+.search input {
+    width: 600px;
 }
-input[type="file"]{
-    display: none;
+
+.search-input::placeholder,
+.search i {
+    color: rgba(0, 0, 0, 0.25);
 }
-.upload-button{
-    display: block;
-    position: relative;
-    background-color: #660c6e;
-    color: #ffffff;
-    font-size: 18px;
-    text-align: center;
-    width:  230px;
-    padding: 18px 0;
-    border-radius: 5px;
-    margin: auto;
-    cursor: pointer;
+
+.btn-productos {
+    padding: 15px;
+    border-radius:10px;
+    text-decoration: none;
 }
