@@ -433,6 +433,13 @@ body {
     opacity: 1;
 }
 
+.btn-nav {
+    background-color: #71d5b9;
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
 /* Estamos probando carajo */
 .contenedor{
     padding: 10px;

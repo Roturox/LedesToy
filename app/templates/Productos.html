@@ -20,9 +20,17 @@
     <!-- Header de la pagina -->
     <header class="header">
         <div class="logo"> 
+            
             <a href="../../index.html"><h1>LedesToy</h1></a>
         </div>
-        <a href="./Productos.html">Productos</a>
+        <form >
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input class="search-input"  type="search" placeholder="Search">
+            </div>
+        </form>
+        <a href="./Productos.html" class="btn-nav">Productos</a>
+        <a href="" class="btn-nav" >Contacto</a>
         <a href="./login.html" class="btn-login"><button><i class="fa-solid fa-user"></i></button></a>
     </header>
     <!-- Fin del header pagina -->
@@ -30,6 +38,41 @@
     <section class="contenedor">
         <!-- Contenedor de elementos -->
         <div class="contenedor-items">
+
+                        <div class="item">
+                            <span class="titulo-item">Oveja</span>
+                            <img src="../static/img/img_peluches/oveja.png" alt="" class="img-item">
+                            <span class="precio-item">$9.39</span>
+                            <button class="boton-item">Agregar al Carrito</button>
+                        </div>
+
+                        <div class="item">
+                            <span class="titulo-item">Cocodrilo gordo</span>
+                            <img src="../static/img/img_peluches/cocodrilo_gordo.jpg" alt="" class="img-item">
+                            <span class="precio-item">$9.39</span>
+                            <button class="boton-item">Agregar al Carrito</button>
+                        </div>
+
+                        <div class="item">
+                            <span class="titulo-item">Creaper</span>
+                            <img src="../static/img/img_peluches/creaaper.jpg" alt="" class="img-item">
+                            <span class="precio-item">$9.39</span>
+                            <button class="boton-item">Agregar al Carrito</button>
+                        </div>
+
+                        <div class="item">
+                            <span class="titulo-item">Elefante</span>
+                            <img src="../static/img/img_peluches/elefante.jpg" alt="" class="img-item">
+                            <span class="precio-item">$9.39</span>
+                            <button class="boton-item">Agregar al Carrito</button>
+                        </div>
+
+                        <div class="item">
+                            <span class="titulo-item">Marta</span>
+                            <img src="../static/img/img_peluches//marta.jpg" alt="" class="img-item">
+                            <span class="precio-item">$9.39</span>
+                            <button class="boton-item">Agregar al Carrito</button>
+                        </div>
 
                         <div class="item">
                             <span class="titulo-item">Ajolote Rosa</span>
@@ -90,13 +133,16 @@
         <!-- Carrito de Compras -->
         <div class="carrito" id="carrito">
             <div class="header-carrito">
-                <h2><i class="fa-solid fa-paw"></i>Peluche</h2>
+                <h2>Peluche</h2>
             </div>
             <div class="carrito-items">
             </div>
             <div class="carrito-total">
                 <div class="fila">
                     <strong>Tu Total</strong>
+                    <span class="carrito-precio-total">
+                        $0
+                    </span>
                     </span>
                 </div>
                 <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>

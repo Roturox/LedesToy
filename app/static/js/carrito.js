@@ -163,7 +163,7 @@ function actualizarTotalCarrito(){
         var item = carritoItems[i];
         var precioElemento = item.getElementsByClassName('carrito-item-precio')[0];
         //quitamos el simobolo peso y el punto de milesimos.
-        var precio = parseFloat(precioElemento.innerText.replace('$','').replace('.',''));
+        var precio = parseFloat(precioElemento.innerText.replace('$','').replace('',''));
         var cantidadItem = item.getElementsByClassName('carrito-item-cantidad')[0];
         console.log(precio);
         var cantidad = cantidadItem.value;
