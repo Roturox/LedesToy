@@ -1,28 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Login Animado</title>
-    <link rel="stylesheet" href="./css/xd.css" />
-  </head>
-  <body>
-    <a href="./index.html" class="btn btn-primary">Volver</a>
-    <div class="contenedor">
-      <div class="caja">
-        <form action="" class="form">
-          <h2 class="titulo">Registrarse</h2>
-          <input type="text" class="input nombre" placeholder="Usuario" />
-          <input
-            type="password"
-            class="input contraseña"
-            placeholder="Contraseña"
-          />
-          <input type="button" class="input registrarse" value="Registrarse" />
-          <div class="grupo">
-            <a href="" class="link olvide-contraseña">Olvidé mi contraseña</a>
-            <a href="" class="link iniciar-sesion">Iniciar sesión</a>
-          </div>
-        </form>
-      </div>
-    </div>
-  </body>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="../static/css/style.css"> <!-- Añade tus estilos aquí -->
+</head>
+<body>
+    <section class="contenedor">
+        <!-- Contenedor de elementos -->
+        <div class="contenedor-items">
+            <!-- Tus items aquí -->
+            <div class="item">
+                <span class="titulo-item">Oveja</span>
+                <img src="../static/img/Ropa/pijama.jpg" alt="" class="img-item">
+                <span class="precio-item">$9.39</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <!-- Resto de los items -->
+        </div>
+
+        <!-- Carrito de Compras -->
+        <div class="carrito" id="carrito">
+            <div class="header-carrito">
+                <h2>Peluche</h2>
+            </div>
+            <div class="carrito-items"></div>
+            <div class="carrito-total">
+                <div class="fila">
+                    <strong>Tu Total</strong>
+                    <span class="carrito-precio-total">$0</span>
+                </div>
+                <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Agregar event listener a los botones "Agregar al Carrito"
+        document.querySelectorAll('.boton-item').forEach(button => {
+            button.addEventListener('click', agregarAlCarritoClicked);
+        });
+
+        function agregarAlCarritoClicked(event) {
+            const button = event.target;
+            const item = button.parentElement;
+            const titulo = item.querySelector('.titulo-item').innerText;
+            const precio = item.querySelector('.precio-item').innerText;
+            const imagenSrc = item.querySelector('.img-item').src;
+            agregarItemAlCarrito(titulo, precio, imagenSrc);
+            actualizarTotalCarrito();
+        }
+
+        function agregarItemAlCarrito(titulo, precio, imagenSrc) {
+            const carritoItems = document.querySelector('.carrito-items');
+            const carritoItemNames = carritoItems.getElementsByClassName('titulo-item-carrito');
+            for (let i = 0; i < carritoItemNames.length; i++) {
+                if (carritoItemNames[i].innerText === titulo) {
+                    alert('Este artículo ya está agregado al carrito');
+                    return;
+                }
+            }
+
+            const carritoRow = document.createElement('div');
+            carritoRow.classList.add('carrito-row');
+            const carritoRowContents = `
+                <div class="carrito-item carrito-columna">
+                    <img class="carrito-item-img" src="${imagenSrc}" width="100" height="100">
+                    <span class="titulo-item-carrito">${titulo}</span>
+                </div>
+                <span class="carrito-precio carrito-columna">${precio}</span>
+                <div class="carrito-cantidad carrito-columna">
+                    <input class="carrito-cantidad-input" type="number" value="1">
+                    <button class="btn-remover" type="button">Remover</button>
+                </div>`;
+            carritoRow.innerHTML = carritoRowContents;
+            carritoItems.append(carritoRow);
+            carritoRow.querySelector('.btn-remover').addEventListener('click', removerItemCarrito);
+            carritoRow.querySelector('.carrito-cantidad-input').addEventListener('change', cantidadCambiada);
+        }
+
+        function removerItemCarrito(event) {
+            const buttonClicked = event.target;
+            buttonClicked.parentElement.parentElement.remove();
+            actualizarTotalCarrito();
+        }
+
+        function cantidadCambiada(event) {
+            const input = event.target;
+            if (isNaN(input.value) || input.value <= 0) {
+                input.value = 1;
+            }
+            actualizarTotalCarrito();
+        }
+
+        function actualizarTotalCarrito() {
+            const carritoItemsContainer = document.querySelector('.carrito-items');
+            const carritoRows = carritoItemsContainer.querySelectorAll('.carrito-row');
+            let total = 0;
+            carritoRows.forEach(row => {
+                const precioElemento = row.querySelector('.carrito-precio');
+                const cantidadElemento = row.querySelector('.carrito-cantidad-input');
+                const precio = parseFloat(precioElemento.innerText.replace('$', ''));
+                const cantidad = cantidadElemento.value;
+                total += precio * cantidad;
+            });
+            document.querySelector('.carrito-precio-total').innerText = `$${total.toFixed(2)}`;
+        }
+    </script>
+</body>
 </html>

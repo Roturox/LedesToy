@@ -19,10 +19,21 @@ body {
     padding: 5px 150px;
 }
 
-.logo a{
+.logo .logo-ledestoy{
+    width: 200px;
+    }
+
+.nav-build-friend {
+    text-align: center;
+}
+
+.nav-build {
+    font-size: 50px;
+    margin: 20px;
     text-decoration: none;
     color: #000;
-    }
+}
+
 
 /* Estilos del btn-login */
 .header .btn-login button {
