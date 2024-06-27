@@ -501,6 +501,28 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
+
+.card {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+.card img {
+    display: block;
+}
+.button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
 /* seccion carrito */
 .carrito{
     border-radius: 0.3125rem;
@@ -618,6 +640,8 @@ body {
 .carrito-total .btn-pagar:hover{
     scale: 1.05;
 }
+
+
 
 
 /*//////////////////////    Estilos De Login/Register   /////////////// */
