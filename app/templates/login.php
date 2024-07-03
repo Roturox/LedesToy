@@ -29,19 +29,19 @@
 
 <div class="fondo_login_register">
     <div class="wrapper">
-            <form action="" method="post" enctype = "multipart/form-data">
+            <form action="../../validar.php" method="post" enctype = "multipart/form-data">
                 <h4>¡Nos alegra volverte a ver!</h4>
     
     
                     <!-- Login de Usuario -->
                 <div class="input-container">
-                    <input type="text" name="email" required>
-                    <label for="input" class="label">Correo Electronico</label>
+                    <input type="text" name="Usuario" required>
+                    <label for="input" class="label">Usuario</label>
                     <div class="underline"></div>
                 </div>
     
                 <div class="input-container">
-                    <input type="password" name="pass" required>
+                    <input type="password" name="Contraseña" required>
                     <label class="label">Contraseña</label>
                     <div class="underline"></div>
                 </div>
