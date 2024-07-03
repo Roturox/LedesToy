@@ -58,6 +58,7 @@ body {
 /* Estilos del top mas vendido */
 .titulos .subtitulos h3 {
     margin-top: 80px;
+    font-weight: bolder;
 }
 .container {
     max-width: 1200px;
@@ -865,7 +866,12 @@ transform: scaleX(1);
 }
 
 .btn-productos {
-    padding: 15px;
-    border-radius:10px;
+    font-size: 30px;
     text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+.btn-productos:hover{
+    color: gray;
+
 }
