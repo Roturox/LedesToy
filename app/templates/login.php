@@ -23,6 +23,7 @@
             <a href="../../index.html"><img src="../static/img/icon/LedesToy.png" alt="" class="logo-ledestoy">
             </a>
         </div>
+        <a href="./Productos.html" class="btn-productos">Productos</a>
         <a href="./login.html" class="btn-login"><button><i class="fa-solid fa-user"></i></button></a>
     </header>
     <!-- Fin del header pagina -->
