@@ -30,7 +30,7 @@
 
 <div class="fondo_login_register">
     <div class="wrapper">
-            <form action="../../validar.php" method="post" enctype = "multipart/form-data">
+            <form action="../../logic_php/validar.php" method="post" enctype = "multipart/form-data">
                 <h4>¡Nos alegra volverte a ver!</h4>
     
     

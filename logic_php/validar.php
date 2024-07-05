@@ -12,11 +12,11 @@ $resultado=mysqli_query($conexion,$consulta);
 $filas=mysqli_fetch_array($resultado);
 
 if($filas['id_cargo']==1){ //administrador
-    header("location:./app/templates/admin.html");
+    header("location:../app/templates/admin.html");
 
 }else
 if($filas['id_cargo']==2){ //cliente
-header("location:./app/templates/ropa.html");
+header("location:../app/templates/productos.html");
 }
 else{
     ?>
